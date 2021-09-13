@@ -47,6 +47,10 @@ Letmeask é perfeito para criadores de conteúdos poderem criar salas de Q&A com
 Este é um projeto desenvolvido durante a **[Next Level Week Together](https://nextlevelweek.com/)**, apresentada dos dias 20 a 27 de Junho de 2021.
 
 
+## Firebase Hosting
+
+https://letmeask-68024.web.app/
+
 ## 🔖 Layout
 
 Você pode visualizar o layout do projeto através do link abaixo:
