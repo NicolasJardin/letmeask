@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Home } from './pages/home/Home'
+import { NewRoom } from './pages/newRoom/NewRoom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+
+import { AuthContextProvider } from './contexts/AuthContext'
+import { Room } from './pages/room/Room'
+import { AdminRoom } from './pages/adminRoom/AdminRoom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <AuthContextProvider>
+        <Switch>
+          <Route path='/' component={Home} exact />
+          <Route path='/rooms/new' component={NewRoom} />
+          <Route path='/rooms/:id' component={Room} />
+          <Route path='/admin/rooms/:id' component={AdminRoom} />
+        </Switch>
+      </AuthContextProvider>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
